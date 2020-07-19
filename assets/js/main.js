@@ -3,7 +3,29 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+$(document).ready(function() {
 
+/* Every time the window is scrolled ... */
+$(window).scroll( function(){
+
+		/* Check the location of each desired element */
+		$('.hideme').each( function(i){
+
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+				/* If the object is completely visible in the window, fade it it */
+				if( bottom_of_window > bottom_of_object ){
+
+						$(this).animate({'opacity':'1'},1500);
+
+				}
+
+		});
+
+});
+
+});
 (function($) {
 
 	skel
@@ -33,10 +55,9 @@
 			CopyText.select();
 			copyText.setSelectionRange(0, 99999)
 			document.execCommand("copy");
-			alert("Copied to Clipboard!"); 
+			alert("Copied to Clipboard!");
 		}
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+
 
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
