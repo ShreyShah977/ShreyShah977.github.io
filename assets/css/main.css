@@ -26,12 +26,11 @@ img.PersonalPhoto{
 
 /*Programming Icons*/
 img.Icons{
-	height: 100px
+	height: 150px
 }
 
 div.icon-bar{
 	float:left;
-
 	padding: 20px;
 	width: 33%;
 
