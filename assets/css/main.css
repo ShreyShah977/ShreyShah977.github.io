@@ -28,7 +28,9 @@ img.PersonalPhoto{
 img.Icons{
 	height: 100px;
 }
-
+img{
+	object-fit: contain;
+}
 div.icon-bar{
 	float:left;
 	padding: 20px;
