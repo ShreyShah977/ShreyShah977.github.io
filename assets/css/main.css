@@ -34,8 +34,7 @@ img{
 div.icon-bar{
 	float:left;
 	padding: 20px;
-	max-width: 20%;
-	min-width: 15%;
+	width: 33%;
 }
 div.hideme{
 	opacity: 0;
